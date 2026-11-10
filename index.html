@@ -3,33 +3,132 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Moje portfólio — začiatok</title>
-  <!-- Vzhľad stránky je v samostatnom súbore styles.css (vrstva CSS) -->
+  <meta name="description" content="Portfólio projektov a tvorby. Objavte výber digitálnych projektov a ozvite sa mi.">
+  <meta name="theme-color" content="#f5f7f5">
+  <title>Adam Šuštiak — portfólio</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-
-  <main class="uvitanie">
-    <div class="emoji">👋</div>
-    <h1>Tu vznikne moje portfólio</h1>
-    <p class="podtext">
-      Toto je štartová stránka kurzu <strong>Tvorba webstránok</strong>.
-      Odteraz ju budeš meniť ty — s pomocou AI asistenta.
-    </p>
-
-    <div class="karta">
-      <p class="karta-nadpis">Ako začať:</p>
-      <ol>
-        <li>Otvor <strong>Copilot Chat</strong> (ikona Copilota vpravo) — sem píšeš, čo chceš vytvoriť.</li>
-        <li>Tento súbor <code>index.html</code> si pozri v <strong>živom náhľade</strong>: pravý klik naň → <em>Show Preview</em>.</li>
-        <li>Choď na <strong>Blok 7</strong> kurzu a postupuj podľa neho.</li>
-      </ol>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="#domov" aria-label="Adam Šuštiak, domov">A<span>.</span>Š</a>
+      <button class="menu-toggle" type="button" aria-label="Otvoriť navigáciu" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hlavná navigácia">
+        <a href="#projekty">Projekty</a>
+        <a href="#o-mne">O mne</a>
+        <a class="nav-contact" href="#kontakt">Kontakt <span aria-hidden="true">↗</span></a>
+      </nav>
     </div>
+  </header>
 
-    <p class="poznamka">
-      Keď spravíš prvú zmenu, tento text pokojne zmaž — je len na úvod.
-    </p>
+  <main>
+    <section class="hero page-width" id="domov" aria-labelledby="hero-title">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow"><span class="eyebrow-dot"></span> PORTFÓLIO <span class="eyebrow-year">2026</span></p>
+        <h1 id="hero-title">Adam<br><span>Šuštiak</span></h1>
+        <p class="hero-description">Tvorím digitálne zážitky, ktoré sú premyslené, užitočné a príjemné na pohľad.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projekty">Pozrieť projekty <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="#o-mne">Viac o mne <span aria-hidden="true">↓</span></a>
+        </div>
+        <p class="availability"><span></span> Otvorený/á novým spoluprácam</p>
+      </div>
+      <div class="hero-visual" data-reveal data-reveal-delay="120">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Pokojná zelená krajina s jazerom a horami" fetchpriority="high">
+        <div class="visual-caption"><span>01 / 03</span><span>Výber z tvorby</span></div>
+        <span class="visual-stamp" aria-hidden="true">Nápady<br>v pohybe</span>
+      </div>
+      <a class="scroll-cue" href="#projekty"><span class="scroll-line"></span> POSUŇ SA NIŽŠIE</a>
+    </section>
+
+    <section class="projects-section" id="projekty" aria-labelledby="projects-title">
+      <div class="page-width">
+        <div class="section-heading" data-reveal>
+          <div>
+            <p class="eyebrow">VÝBER Z TVORBY <span class="eyebrow-year">01 — 03</span></p>
+            <h2 id="projects-title">Projekty<span class="heading-mark">.</span></h2>
+          </div>
+          <p class="section-intro">Každý projekt sa začína otázkou. Tu sú tri odpovede, na ktorých mi záleží.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card" data-reveal>
+            <div class="project-image project-image-green">
+              <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Moderná architektúra zasadená do zelene" loading="lazy">
+              <span class="project-index">01</span>
+            </div>
+            <div class="project-info">
+              <div><p class="project-type">WEB · IDENTITA</p><h3>Zelené Vlčince</h3></div>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </div>
+            <p class="project-description">Digitálny domov pre miesto, kde sa mestský život stretáva s prírodou.</p>
+          </article>
+
+          <article class="project-card" data-reveal data-reveal-delay="100">
+            <div class="project-image project-image-city">
+              <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Mesto v podvečernom svetle" loading="lazy">
+              <span class="project-index">02</span>
+            </div>
+            <div class="project-info">
+              <div><p class="project-type">APLIKÁCIA · UX/UI</p><h3>Mesto v pohybe</h3></div>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </div>
+            <p class="project-description">Jednoduchšia cesta mestom, od prvého kliknutia až po cieľ.</p>
+          </article>
+
+          <article class="project-card" data-reveal data-reveal-delay="200">
+            <div class="project-image project-image-coffee">
+              <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Útulná kaviareň s pripravenou kávou" loading="lazy">
+              <span class="project-index">03</span>
+            </div>
+            <div class="project-info">
+              <div><p class="project-type">BRANDING · E-SHOP</p><h3>Káva na rohu</h3></div>
+              <span class="project-arrow" aria-hidden="true">↗</span>
+            </div>
+            <p class="project-description">Malá kávová značka s veľkým dôrazom na každodenné rituály.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="o-mne" aria-labelledby="about-title">
+      <div class="page-width about-layout">
+        <div class="about-heading" data-reveal>
+          <p class="eyebrow">PÁR SLOV O MNE <span class="eyebrow-year">02 — 03</span></p>
+          <h2 id="about-title">Dobrý nápad<br>si zaslúži<br><span>dobré spracovanie.</span></h2>
+        </div>
+        <figure class="about-photo" data-reveal data-reveal-delay="80">
+          <img src="img/unnamed.jpg" alt="Adam Šuštiak – portrét" loading="lazy" decoding="async">
+        </figure>
+        <div class="about-copy" data-reveal data-reveal-delay="120">
+          <p class="about-lead">Baví ma prepájať nápady, ľudí a technológie do vecí, ktoré fungujú aj dobre vyzerajú.</p>
+          <p>Od prvého náčrtu po posledný detail hľadám riešenia, ktoré sú zrozumiteľné a majú svoj dôvod. Verím, že kvalitná tvorba nemusí byť komplikovaná — stačí jej pozornosť, zvedavosť a dobrá spolupráca.</p>
+          <div class="about-tags" aria-label="Oblasti tvorby">
+            <span>Dizajn</span><span>Digitálne produkty</span><span>Vývoj</span>
+          </div>
+          <a class="text-link about-link" href="#kontakt">Poďme sa porozprávať <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <footer class="site-footer" id="kontakt">
+    <div class="page-width footer-inner">
+      <div class="footer-copy" data-reveal>
+        <p class="eyebrow">MÁŠ NÁPAD? <span class="eyebrow-year">03 — 03</span></p>
+        <h2>Začnime<br><span>niečo dobré.</span></h2>
+        <a class="button button-light" href="mailto:ahoj@mojeportfolio.sk">Napíš mi <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="footer-meta">
+        <a class="footer-email" href="mailto:ahoj@mojeportfolio.sk">ahoj@mojeportfolio.sk</a>
+        <p>© <span id="current-year">2026</span> Adam Šuštiak</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
